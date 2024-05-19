@@ -1,11 +1,11 @@
 import { beforeEach, afterEach, describe, it } from "mocha";
-import { GoogleHomePage } from "../../pages/google/google_homepage.js";
+import { GoogleHomePage } from "../../pages/search_engine/search_engine";
 
 const googleHomePage = new GoogleHomePage()
 
-describe('Google test', async function() {
+describe('Google test', async function () {
 
-  beforeEach(async function() {
+  beforeEach(async function () {
     await googleHomePage.open()
   })
 

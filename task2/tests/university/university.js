@@ -1,4 +1,4 @@
-import { MospolytechPage } from "../../pages/mospolytech/mospolytech.js";
+import { MospolytechPage } from "../../sections/university/university";
 import { beforeEach, afterEach, describe, it } from "mocha";
 import { assert } from "chai";
 
@@ -22,7 +22,7 @@ describe('mp test', () => {
   it('ввод группы', async () => {
     await mp.enterGroup()
   })
-  
+
   it('проверка на количество групп в списке, проверка на то, есть ли нужная группа в списке', async () => {
     const groups = await mp.getGroups()
     const myGroup = await mp.findGroup()
@@ -35,8 +35,8 @@ describe('mp test', () => {
     assert.equal(await mp.checkColorOfCurrentDay(), true)
   })
 
-  afterEach(async function(){
-    if (this.currentTest.state === 'failed'){
+  afterEach(async function () {
+    if (this.currentTest.state === 'failed') {
       await mp.saveScreenshot(this.currentTest.title)
       console.log(`скриншот сохранен в папке screenshots/lab2/${this.currentTest.title}`)
     }
