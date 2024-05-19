@@ -1,5 +1,5 @@
 import { beforeEach, afterEach, describe, it } from "mocha";
-import { GoogleHomePage } from "../../pages/search_engine/search_engine";
+import { GoogleHomePage } from "../../sections/search_engine/search_engine.js";
 
 const googleHomePage = new GoogleHomePage()
 

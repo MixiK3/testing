@@ -1,14 +1,13 @@
 {
-  "name": "selenium",
+  "name": "testing",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node ./src/lab1.js",
-    "lab1": "node ./src/lab1.js",
-    "lab2task": "node ./src/lab2/tests/google/google_test.js",
-    "lab2": "npm test ./src/lab2/tests/lambda/lambda_test.js",
-    "lab2mp": "npm test ./src/lab2/tests/mospolytech/mospolytech_test.js",
+    "start": "node ./index.js",
+    "lab2task": "node ./tests/search_engine/search_engine.js",
+    "lab2": "npm test ./tests/function_test/function_test.js",
+    "lab2mp": "npm test ./tests/university/university.js",
     "test": "mocha --recursive --timeout 60000"
   },
   "author": "",

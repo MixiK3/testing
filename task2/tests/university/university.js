@@ -1,4 +1,4 @@
-import { MospolytechPage } from "../../sections/university/university";
+import { MospolytechPage } from "../../sections/university/university.js";
 import { beforeEach, afterEach, describe, it } from "mocha";
 import { assert } from "chai";
 

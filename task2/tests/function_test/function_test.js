@@ -1,6 +1,6 @@
 import { beforeEach, afterEach, describe, it } from "mocha";
 import { assert } from "chai";
-import { LambdaPage } from "../../sections/function_test/function_test";
+import { LambdaPage } from "../../sections/function_test/function_test.js";
 
 const lambdaPage = new LambdaPage()
 
