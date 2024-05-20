@@ -1,7 +1,8 @@
-// lambdaTest.js
 const assert = require('assert');
 const { Builder, Browser } = require('selenium-webdriver');
 const { LambdaPage } = require('./LambdaPage');
+const fs = require('fs');
+const path = require('path');
 
 async function lambdaTest() {
     const driver = new Builder().forBrowser(Browser.CHROME).build();
@@ -37,8 +38,12 @@ async function lambdaTest() {
 
         await lambdaPage.sleep(3000);
     } catch (err) {
+        const currentDateTime = new Date().toISOString().replace(/[-:]/g, '').replace('T', '_').replace('.', '_');
+        const screenshotFileName = `lambdaTest_${currentDateTime}.jpg`;
+        const screenshotPath = path.join(__dirname, screenshotFileName);
+
         await driver.takeScreenshot().then(function (image) {
-            require("fs").writeFileSync('screenshot.jpg', image, 'base64');
+            fs.writeFileSync(screenshotPath, image, 'base64');
         });
 
         console.error("Тест упал по причине %s", err);
