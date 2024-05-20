@@ -1,4 +1,4 @@
-import { beforeEach, afterEach, describe, it } from "mocha";
+import { afterEach, describe, it } from "mocha";
 import { assert } from "chai";
 import { LambdaPage } from "../../sections/function_test/function_test.js";
 

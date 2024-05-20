@@ -1,22 +1,17 @@
 {
   "name": "testing",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node ./index.js",
-    "lab2task": "node ./tests/search_engine/search_engine.js",
-    "lab2": "npm test ./tests/function_test/function_test.js",
-    "lab2mp": "npm test ./tests/university/university.js",
     "test": "mocha --recursive --timeout 60000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "assert": "^2.1.0",
-    "chai": "^4.4.1",
-    "chromedriver": "^125.0.0",
-    "fs": "^0.0.1-security",
+    "chai": "^4.3.7",
+    "esm": "^3.2.25",
     "mocha": "^10.4.0",
     "selenium": "^2.20.0",
     "selenium-webdriver": "^4.21.0"
